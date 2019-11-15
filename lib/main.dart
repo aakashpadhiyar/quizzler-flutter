@@ -29,8 +29,12 @@ class _QuizPageState extends State<QuizPage> {
   List<String> questions = [
     'You can lead a cow down stairs but not up stairs.',
     'Approximately one quarter fo human bones are in the feet.',
-    'A Slug\'s blood is green.'
+    'A Slug\'s blood is green.',
+    'Buzz Aldrin\'s mother\'s maiden name was \"Moon\".',
+    'It is illegal to pee in the Ocean in Portugal.',
   ];
+
+  List<bool> answers = [false, true, true, true, true];
 
   int questionNumber = 0;
 
@@ -69,6 +73,13 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                bool correctanswer = answers[questionNumber];
+
+                if (correctanswer == true) {
+                  print('user got it right');
+                } else {
+                  print('user got it wrong');
+                }
                 setState(() {
                   scoreKeeper.add(
                     Icon(
@@ -92,6 +103,13 @@ class _QuizPageState extends State<QuizPage> {
                 style: TextStyle(color: Colors.white, fontSize: 20.0),
               ),
               onPressed: () {
+                bool correctanswer = answers[questionNumber];
+                if (correctanswer == false) {
+                  print('user got it right');
+                } else {
+                  print('user got it wrong');
+                }
+
                 setState(() {
                   scoreKeeper.add(
                     Icon(
