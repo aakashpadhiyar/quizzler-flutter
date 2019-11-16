@@ -34,7 +34,13 @@ class _QuizPageState extends State<QuizPage> {
     'It is illegal to pee in the Ocean in Portugal.',
   ];
 
-  List<bool> answers = [false, true, true, true, true];
+  List<bool> answers = [
+    false,
+    true,
+    true,
+    true,
+    true,
+  ];
 
   int questionNumber = 0;
 
